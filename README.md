@@ -1,4 +1,4 @@
-## Requirements
+- ## Requirements
   - node.js
   - npm
   - yarn
@@ -7,12 +7,12 @@
  
  
   
-## Plug Manager
+- ## Plug Manager
   [vim-plug](https://github.com/junegunn/vim-plug)
 
 
 
-## How to setup NERDTree icons
+- ## How to setup NERDTree icons
 
 to set up nerdtree icons you need to install font 3270
 
@@ -31,7 +31,7 @@ unzip ./3270.zip -d ~/.fonts && fc-cache -fv
 
 
 
-## Copy and Paste
+- ## Copy and Paste
 
 ```vim
 :set number
