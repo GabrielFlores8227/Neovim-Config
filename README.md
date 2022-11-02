@@ -8,15 +8,34 @@
 ## Plug Manager
   [vim-plug](https://github.com/junegunn/vim-plug)
 
+## How to setup NERDTree icons
+
+to set up nerdtree icons you need to install font 3270
+
+  - ### Manual
+  
+  Download 3270 font
+  
+  ```bash
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip
+  ```
+
 ## Copy and Paste
 
 ```vim
 :set number
 :set autoindent
+:set nowrap
 filetype on
 syntax on
+set encoding=UTF-8
 
 call plug#begin()
+
+" how to install nerd font
+" https://github.com/ryanoasis/vim-devicons/wiki/Installation
+Plug 'ryanoasis/vim-devicons'
+
 " Html snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -37,14 +56,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-json', 
-  \ 'coc-html',
-  \ 'coc-css', 
-  \ 'coc-python',
-  \ ]
+
+""""""""""""""""""""""""""""vim-devicons""""""""""""""""""""""""""""""
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 """"""""""""""""""""""""""""monokay setup"""""""""""""""""""""""""""""
 colorscheme vim-monokai-tasty
@@ -56,6 +70,15 @@ let g:NERDTreeDirArrowExpandable="📁"
 let g:NERDTreeDirArrowCollapsible="📂"
 
 """"""""""""""""""""""""""""coc.nvim setup""""""""""""""""""""""""""""
+
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-json', 
+  \ 'coc-html',
+  \ 'coc-css', 
+  \ 'coc-python',
+  \ ]
 
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
 " utf-8 byte sequence.
