@@ -13,8 +13,6 @@
 ## How to setup NERDTree icons (Unix)
 
 to set up nerdtree icons you need to install font 3270
-
-### Manual
   
 Download 3270 font
 
@@ -26,12 +24,6 @@ Unzip zip file on ~/ and update fc-cache
 
 ```bash
 unzip ./3270.zip -d ~/.fonts && fc-cache -fv
-```
-
-### Driver
-
-```bash
-chmod +x font_installer.sh && ./font_installer.sh
 ```
 
 ## Copy and Paste
