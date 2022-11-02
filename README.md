@@ -4,9 +4,13 @@
   - yarn
   - python3
   - python3-pip
+ 
+ 
   
 ## Plug Manager
   [vim-plug](https://github.com/junegunn/vim-plug)
+
+
 
 ## How to setup NERDTree icons
 
@@ -14,11 +18,18 @@ to set up nerdtree icons you need to install font 3270
 
   - ### Manual
   
-  Download 3270 font
-  
-  ```bash
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip
-  ```
+Download 3270 font
+
+```bash
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip
+```
+Unzip zip file on ~/ and update fc-cache
+
+```bash
+unzip ./3270.zip -d ~/.fonts && fc-cache -fv
+```
+
+
 
 ## Copy and Paste
 
