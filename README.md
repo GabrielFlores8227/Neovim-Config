@@ -1,4 +1,4 @@
-- ## Requirements
+## Requirements
   - node.js
   - npm
   - yarn
@@ -6,32 +6,35 @@
   - python3-pip
  
  
-  
-- ## Plug Manager
-  [vim-plug](https://github.com/junegunn/vim-plug)
+## Plug Manager
+[vim-plug](https://github.com/junegunn/vim-plug)
 
 
-
-- ## How to setup NERDTree icons
+## How to setup NERDTree icons
 
 to set up nerdtree icons you need to install font 3270
 
-  - ### Manual
+### Manual
   
 Download 3270 font
 
 ```bash
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip
 ```
+
 Unzip zip file on ~/ and update fc-cache
 
 ```bash
 unzip ./3270.zip -d ~/.fonts && fc-cache -fv
 ```
 
+### Using font_installer.sh
 
+```bash
+chmod +x font_installer.sh && ./font_installer.sh
+```
 
-- ## Copy and Paste
+## Copy and Paste
 
 ```vim
 :set number
