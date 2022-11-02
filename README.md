@@ -28,7 +28,7 @@ Unzip zip file on ~/ and update fc-cache
 unzip ./3270.zip -d ~/.fonts && fc-cache -fv
 ```
 
-### Using font_installer.sh
+### Driver
 
 ```bash
 chmod +x font_installer.sh && ./font_installer.sh
