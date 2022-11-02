@@ -10,7 +10,7 @@
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 
-## How to setup NERDTree icons
+## How to setup NERDTree icons (Unix)
 
 to set up nerdtree icons you need to install font 3270
 
