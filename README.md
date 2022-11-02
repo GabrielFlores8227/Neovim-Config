@@ -12,7 +12,7 @@
 
 ## How to setup NERDTree icons (Unix)
 
-to set up nerdtree icons you need to install font 3270
+To set up nerdtree icons you need to install font 3270
   
 Download 3270 font
 
