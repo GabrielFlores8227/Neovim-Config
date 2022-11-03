@@ -88,4 +88,4 @@ fi
 
 #---handle init.vim---
 echo -e "\n\033[0;32m[+] Cloning https://github.com/GabrielFlores8227/nvim\033[0m"
-[[ ! -d "$HOME/.config/nvim" ]] && git clone "https://github.com/GabrielFlores8227/nvim" && mv "./nvim" "$HOME/.config/nvim" && echo -e "\n\033[1;32m🔥 All setup, execute :PlugInstall and enjoy conding! 🔥\033[m" || echo -e "\033[0;31m[x] nvim folder already exists ($HOME/.config/nvim), remove existing nvim folder and try again\033[m" && exit 1
+[[ ! -d "$HOME/.config/nvim" ]] && git clone "https://github.com/GabrielFlores8227/nvim" && mv "./nvim" "$HOME/.config/nvim" && echo -e "\n\033[1;32m🔥 All setup, execute :PlugInstall and enjoy coding! 🔥\033[m" || echo -e "\033[0;31m[x] nvim folder already exists ($HOME/.config/nvim), remove existing nvim folder and try again\033[m" && exit 1
