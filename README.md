@@ -26,7 +26,7 @@ Unzip zip file on ~/ and update fc-cache
 unzip ./3270.zip -d ~/.fonts && fc-cache -fv
 ```
 
-## Copy and Paste
+## Copy and Paste (init.vim)
 
 ```vim
 :set number
