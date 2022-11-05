@@ -4,10 +4,6 @@
   - yarn
   - python3
   - python3-pip
- 
- 
-## Plug Manager
-[vim-plug](https://github.com/junegunn/vim-plug)
 
 ## Autopilot (autopilot.sh)
 autopilot.sh is a nvim installer and configurator created by GabrielFlores8227 and Piter8227 to be used in Debian distros.
