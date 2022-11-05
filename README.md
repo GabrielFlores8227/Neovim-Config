@@ -37,6 +37,7 @@ syntax on
 set encoding=UTF-8
 
 call plug#begin()
+Plug 'jiangmiao/auto-pairs'
 
 " how to install nerd font
 " https://github.com/ryanoasis/vim-devicons/wiki/Installation
