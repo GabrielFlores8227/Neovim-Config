@@ -17,23 +17,6 @@ Here is a list of everything the autopilot.sh installs (if your computer already
   - nerdfonts (font 3270)
   - [vim-plug](https://github.com/junegunn/vim-plug)
 
-
-## How to setup NERDTree icons (Unix)
-
-To set up nerdtree icons you need to install font 3270
-  
-Download font 3270
-
-```bash
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip
-```
-
-Unzip zip file on ~/ and update fc-cache
-
-```bash
-unzip ./3270.zip -d ~/.fonts && fc-cache -fv
-```
-
 ## Copy and Paste (init.vim)
 
 ```vim
