@@ -89,4 +89,4 @@ fi
 #---handle init.vim---
 [[ ! -d "$HOME/.config" ]] && mkdir "$HOME/.config"
 [[ ! -d "$HOME/.config/nvim" ]] && mkdir "$HOME/.config/nvim"
-[[ ! -f "$HOME/.config/nvim/init.vim" ]] && cp -r "./init.vim" "$HOME/.config/nvim" && echo -e "\033[0;32m[+] All setup, execute :PlugInstall and enjoy coding!\033[0m" || echo -e "\033[0;31m[x] init.vim already exist ("$HOME/.config/nvim/init.vim"); remove or rename init.vim and try again\033[0m"
+[[ ! -f "$HOME/.config/nvim/init.vim" ]] && cp "./init.vim" "$HOME/.config/nvim" && echo -e "\033[0;32m[+] All setup, execute :PlugInstall and enjoy coding!\033[0m" || echo -e "\033[0;31m[x] init.vim already exist ("$HOME/.config/nvim/init.vim"); remove or rename init.vim and try again\033[0m"
