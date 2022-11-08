@@ -12,7 +12,7 @@ then
 else
     echo -e ":\033[1;31m Python3 is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Python3\033[m"
-    sudo apt-get install python3 python3-pip 
+    sudo apt-get install python3 python3-pip  || exit 1
 fi
 
 #---handle curl---
@@ -24,7 +24,7 @@ then
 else
     echo -e ":\033[1;31m Curl is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Curl\033[0m"
-    sudo apt-get install curl
+    sudo apt-get install curl || exit 1
 fi
 
 #---handle node & npm---
@@ -36,7 +36,7 @@ then
 else
     echo -e ":\033[1;31m Node.js is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Node.js\033[0m | source: https://deb.nodesource.com/setup_19.x"
-    curl -fsSL "https://deb.nodesource.com/setup_19.x" | sudo -E bash - && sudo apt-get install -y nodejs
+    curl -fsSL "https://deb.nodesource.com/setup_19.x" | sudo -E bash - && sudo apt-get install -y nodejs || exit 1
 fi
 
 #---handle yarn---
@@ -48,7 +48,7 @@ then
 else
     echo -e ":\033[1;31m Yarn is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Yarn\033[0m"
-    sudo apt-get install yarn
+    sudo apt-get install yarn || exit 1
 fi
 
 #---handle nvim---
@@ -59,7 +59,7 @@ then
 else
     echo -e ":\033[1;31m Neovim is not installed\033[0m" 
     echo -e "\033[0;32m[+] Installing nvim\033[0m"
-    sudo apt-get install neovim 
+    sudo apt-get install neovim || exit 1
 fi
 
 #---handle font 3270---
@@ -71,8 +71,21 @@ do
 
     if [ "$USER_INPUT" = "y" ] || [ "$USER_INPUT" = "Y" ]
     then
-        [[ ! -f "./3270.zip" ]] && sudo wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip"
-        unzip "./3270.zip" -d "$HOME/.fonts" && fc-cache -fv 
+        #---handle wget---
+        if ! command -v wget &> /dev/null
+        then
+            sudo apt-get install wget || exit 1
+        fi
+
+        [[ ! -f "./3270.zip" ]] && sudo wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip" || exit 1
+
+        #---handle unzip---
+        if ! command -v unzip &> /dev/null
+        then
+            sudo apt-get install unzip || exit 1
+        fi
+
+        unzip "./3270.zip" -d "$HOME/.fonts" && fc-cache -fv || exit 1
         break
     elif [ "$USER_INPUT" = "n" ] || [ "$USER_INPUT" = "N" ]
     then
