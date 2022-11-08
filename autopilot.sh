@@ -15,6 +15,18 @@ else
     sudo apt-get install python3 python3-pip 
 fi
 
+#---handle curl---
+echo -ne "\n[*] Checking Curl"
+
+if command -v curl &> /dev/null
+then
+    echo -e ":\033[1;32m Curl is installed\033[0m"
+else
+    echo -e ": \033[1;31m Curl is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Curl\033[0m"
+    sudo apt-get install curl
+fi
+
 #---handle node & npm---
 echo -ne "\n[*] Checking Node.js"
 
