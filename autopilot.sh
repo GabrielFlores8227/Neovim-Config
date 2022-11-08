@@ -22,7 +22,7 @@ if command -v curl &> /dev/null
 then
     echo -e ":\033[1;32m Curl is installed\033[0m"
 else
-    echo -e ": \033[1;31m Curl is not installed\033[0m"
+    echo -e ":\033[1;31m Curl is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Curl\033[0m"
     sudo apt-get install curl
 fi
@@ -34,7 +34,7 @@ if command -v node &> /dev/null
 then
     echo -e ":\033[1;32m Node.js is installed\033[0m"
 else
-    echo -e ": \033[1;31m Node.js is not installed\033[0m"
+    echo -e ":\033[1;31m Node.js is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Node.js\033[0m | source: https://deb.nodesource.com/setup_19.x"
     curl -fsSL "https://deb.nodesource.com/setup_19.x" | sudo -E bash - && sudo apt-get install -y nodejs
 fi
@@ -46,7 +46,7 @@ if command -v yarn &> /dev/null
 then
     echo -e ":\033[1;32m Yarn is installed\033[0m"
 else
-    echo -e ": \033[1;31m Yarn is not installed\033[0m"
+    echo -e ":\033[1;31m Yarn is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Yarn\033[0m"
     sudo apt-get install yarn
 fi
@@ -57,7 +57,7 @@ if command -v nvim &> /dev/null
 then
     echo -e ":\033[1;32m Neovim is installed\033[0m"
 else
-    echo -e ": \033[1;31m Neovim is not installed\033[0m" 
+    echo -e ":\033[1;31m Neovim is not installed\033[0m" 
     echo -e "\033[0;32m[+] Installing nvim\033[0m"
     sudo apt-get install neovim 
 fi
@@ -91,7 +91,7 @@ echo -ne "\n[*] Checking Vim-Plug"
 
 if [[ ! -d "$HOME/.local/share/nvim" ]]
 then
-    echo -e ": \033[1;31m Vim-Plug is not installed\033[0m"
+    echo -e ":\033[1;31m Vim-Plug is not installed\033[0m"
     echo -e "\033[0;32m[+] Installing Vim-Plug\033[0m | source: https://github.com/junegunn/vim-plug"
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' || exit 1
