@@ -1,214 +1,117 @@
-:set number
-:set autoindent
-:set nowrap
-filetype on
-syntax on
-set encoding=UTF-8
-let g:coc_disable_startup_warning = 1
-let NERDTreeShowHidden=1
+#!/bin/bash
+sudo apt-get update
+clear
 
-call plug#begin()
-Plug 'jiangmiao/auto-pairs'
+#---handle python3 & pip---
+echo -n "[*] Checking Python3"
 
-" how to install nerd font
-" https://github.com/ryanoasis/vim-devicons/wiki/Installation
-Plug 'ryanoasis/vim-devicons'
-
-" Html snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" Syntax highlighting for languages
-Plug 'sheerun/vim-polyglot'
-
-" A light and configurable statusline/tabline plugin for Vim
-Plug 'itchyny/lightline.vim'
-
-" Vim-monokai-tasty color theme
-Plug 'patstockwell/vim-monokai-tasty'
-
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Directory tree
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-call plug#end()
-
-""""""""""""""""""""""""""""vim-devicons""""""""""""""""""""""""""""""
-set guifont=DroidSansMono\ Nerd\ Font\ 11
-
-""""""""""""""""""""""""""""monokay setup"""""""""""""""""""""""""""""
-colorscheme vim-monokai-tasty
-
-""""""""""""""""""""""""""""nerdtree setup""""""""""""""""""""""""""""
-nmap <C-n> :NERDTreeToggle<CR>
-
-let g:NERDTreeDirArrowExpandable="📁"
-let g:NERDTreeDirArrowCollapsible="📂"
-
-""""""""""""""""""""""""""""coc.nvim setup""""""""""""""""""""""""""""
-
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-json', 
-  \ 'coc-html',
-  \ 'coc-css', 
-  \ 'coc-python',
-  \ 'coc-sh',
-  \ ]
-
-" May need for vim (not neovim) since coc.nvim calculate byte offset by count
-" utf-8 byte sequence.
-set encoding=utf-8
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-set signcolumn=yes
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: There's always complete item selected by default, you may want to enable
-" no select by `"suggest.noselect": true` in your configuration file.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-    \ coc#pum#visible() ? coc#pum#next(1) :
-    \ CheckBackspace() ? "\<Tab>" :
-    \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-let col = col('.') - 1
-return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-inoremap <silent><expr> <c-space> coc#refresh()
+if command -v python3 &> /dev/null 
+then
+    echo -e ":\033[1;32m Python3 is installed\033[0m"
 else
-inoremap <silent><expr> <c-@> coc#refresh()
-endif
+    echo -e ":\033[1;31m Python3 is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Python3\033[m"
+    sudo apt-get install python3 python3-pip  || exit 1
+fi
 
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+#---handle curl---
+echo -ne "\n[*] Checking Curl"
 
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-function! ShowDocumentation()
-if CocAction('hasProvider', 'hover')
-  call CocActionAsync('doHover')
+if command -v curl &> /dev/null
+then
+    echo -e ":\033[1;32m Curl is installed\033[0m"
 else
-  call feedkeys('K', 'in')
-endif
-endfunction
+    echo -e ":\033[1;31m Curl is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Curl\033[0m"
+    sudo apt-get install curl || exit 1
+fi
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+#---handle node & npm---
+echo -ne "\n[*] Checking Node.js"
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+if command -v node &> /dev/null
+then
+    echo -e ":\033[1;32m Node.js is installed\033[0m"
+else
+    echo -e ":\033[1;31m Node.js is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Node.js\033[0m | source: https://deb.nodesource.com/setup_19.x"
+    curl -fsSL "https://deb.nodesource.com/setup_19.x" | sudo -E bash - && sudo apt-get install -y nodejs || exit 1
+fi
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+#---handle yarn---
+echo -ne "\n[*] Checking Yarn"
 
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
+if command -v yarn &> /dev/null
+then
+    echo -e ":\033[1;32m Yarn is installed\033[0m"
+else
+    echo -e ":\033[1;31m Yarn is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Yarn\033[0m"
+    sudo apt-get install yarn || exit 1
+fi
 
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+#---handle nvim---
+echo -ne "\n[*] Checking Neovim"
+if command -v nvim &> /dev/null
+then
+    echo -e ":\033[1;32m Neovim is installed\033[0m"
+else
+    echo -e ":\033[1;31m Neovim is not installed\033[0m" 
+    echo -e "\033[0;32m[+] Installing nvim\033[0m"
+    sudo apt-get install neovim || exit 1
+fi
 
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+#---handle font 3270---
+echo -e "\n"
 
-" Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
+while true;
+do
+    read -p "[>] Install Nerdfonts? [y/n]: " USER_INPUT
 
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+    if [ "$USER_INPUT" = "y" ] || [ "$USER_INPUT" = "Y" ]
+    then
+        #---handle wget---
+        if ! command -v wget &> /dev/null
+        then
+            sudo apt-get install wget || exit 1
+        fi
 
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
+        [[ ! -f "./3270.zip" ]] && sudo wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip" || exit 1
 
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
+        #---handle unzip---
+        if ! command -v unzip &> /dev/null
+        then
+            sudo apt-get install unzip || exit 1
+        fi
 
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocActionAsync('format')
+        unzip "./3270.zip" -d "$HOME/.fonts" && fc-cache -fv || exit 1
+        break
+    elif [ "$USER_INPUT" = "n" ] || [ "$USER_INPUT" = "N" ]
+    then
+        break
+    else
+        echo -e "\033[0;31m[x] please use only 'y' or 'n'\033[0m" && sleep 2
+        for ((i=0; i<2; i++))
+        do
+            tput cuu1 && tput el
+        done
+    fi
+done
 
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+#---handle vim-plug---
+echo -ne "\n[*] Checking Vim-Plug"
 
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+if [[ ! -d "$HOME/.local/share/nvim" ]]
+then
+    echo -e ":\033[1;31m Vim-Plug is not installed\033[0m"
+    echo -e "\033[0;32m[+] Installing Vim-Plug\033[0m | source: https://github.com/junegunn/vim-plug"
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' || exit 1
+else
+    echo -e ":\033[0;32m Vim-Plug is installed\033[0m"
+fi
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+#---handle init.vim---
+[[ ! -d "$HOME/.config" ]] && mkdir "$HOME/.config"
+[[ ! -d "$HOME/.config/nvim" ]] && mkdir "$HOME/.config/nvim"
+[[ ! -f "$HOME/.config/nvim/init.vim" ]] && cp "./init.vim" "$HOME/.config/nvim" && echo -e "\033[0;32m[+] All setup, execute :PlugInstall and enjoy coding!\033[0m" || echo -e "\033[0;31m[x] init.vim already exist ("$HOME/.config/nvim/init.vim"); remove or rename init.vim and try again\033[0m"
