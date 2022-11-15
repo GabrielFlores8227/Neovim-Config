@@ -29,6 +29,8 @@ Here is a list of everything the autopilot.sh installs (if your computer already
 filetype on
 syntax on
 set encoding=UTF-8
+let g:coc_disable_startup_warning = 1
+let NERDTreeShowHidden=1
 
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
