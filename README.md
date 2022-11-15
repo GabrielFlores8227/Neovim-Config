@@ -14,6 +14,8 @@ Here is a list of everything the autopilot.sh installs (if your computer already
   - yarn
   - python3
   - python3-pip
+  - curl
+  - wget
   - nvim
   - nerdfonts (font 3270)
   - [vim-plug](https://github.com/junegunn/vim-plug)
