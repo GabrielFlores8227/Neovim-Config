@@ -5,20 +5,6 @@
   - python3
   - python3-pip
   - nerdfonts 
-  
-## Autopilot (autopilot.sh)
-autopilot.sh is a nvim installer and configurator created by GabrielFlores8227 and Piter8227 to be used in Debian distros or Debian based distros.
-Here is a list of everything the autopilot.sh installs (if your computer already has any item on the list, the item will not be reinstalled):
-  - node.js
-  - npm
-  - yarn
-  - python3
-  - python3-pip
-  - curl
-  - wget
-  - nvim
-  - nerdfonts (font 3270)
-  - [vim-plug](https://github.com/junegunn/vim-plug)
 
 ## Copy and Paste (init.vim)
 
