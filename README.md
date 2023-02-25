@@ -7,7 +7,7 @@
   - nerdfonts 
   
 ## Deb-driver
-deb-driver is a auto-pilot installer for debian environment
+deb-driver is a auto-pilot nvim and plugs installer for debian environment
 
 ## Copy and Paste (init.vim)
 
