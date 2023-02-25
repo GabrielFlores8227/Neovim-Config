@@ -6,7 +6,7 @@
   - python3-pip
   - nerdfonts 
   
-## Deb-driver
+## Deb-driver (auto-installer)
 deb-driver is a auto-pilot nvim and plugs installer for debian environment
 
 ```bash
