@@ -41,4 +41,4 @@ CHECK_PACKAGE_D nerd-fonts "wget -O $TEMP https://github.com/ryanoasis/nerd-font
 
 CHECK_PACKAGE_D vim-plug "sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
 
-CHECK_PACKAGE_D nvim-ide "mv -n ./init.vim $HOME/.config/nvim/init.vim"
+CHECK_PACKAGE_D nvim-ide "git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim"
