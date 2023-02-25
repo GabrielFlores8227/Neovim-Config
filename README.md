@@ -9,6 +9,10 @@
 ## Deb-driver
 deb-driver is a auto-pilot nvim and plugs installer for debian environment
 
+```bash
+git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/deb-driver.sh && ./nvim/deb-driver.sh
+```
+
 ## Copy and Paste (init.vim)
 
 ```vim
