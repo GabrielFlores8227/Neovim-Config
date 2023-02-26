@@ -1,7 +1,7 @@
 function CHECK_PACKAGE_D() {
 	clear && echo -e "\n\033[1;32m[*] Verifying $1\033[m" \
 	&& eval $2 \
-	&& echo -e "\n\033[0;37;42m$1 installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
+	&& echo -e "\n\033[0;37;42m$1 is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
 	|| echo -e "\n\033[0;37;41m$1 could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
 }
 
