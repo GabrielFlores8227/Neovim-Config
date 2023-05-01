@@ -25,7 +25,7 @@ CHECK_PACKAGE_D yarn "sudo apt-get install yarn"
 
 CHECK_PACKAGE_D node "curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install -y nodejs"
 
-#---nvim & utils--------------------------------------------------------------------------------------------------------------------
+#---nvim & others-------------------------------------------------------------------------------------------------------------------
 CHECK_PACKAGE_D nvim "sudo apt-get install neovim"
 
 CHECK_PACKAGE_D unzip "sudo apt-get install unzip"
