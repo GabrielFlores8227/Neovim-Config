@@ -8,7 +8,8 @@ let g:coc_disable_startup_warning = 1
 let NERDTreeShowHidden=1
 
 call plug#begin()
-Plug 'jiangmiao/auto-pairs'
+" Prettier
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " how to install nerd font
 " https://github.com/ryanoasis/vim-devicons/wiki/Installation
@@ -17,6 +18,7 @@ Plug 'ryanoasis/vim-devicons'
 " Html snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
 
 " Syntax highlighting for languages
 Plug 'sheerun/vim-polyglot'
@@ -34,6 +36,21 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
+
+""""""""""""""""""""""""""""prettier setup""""""""""""""""""""""""""""
+let g:prettier#config#single_quote = v:true " use single quotes instead of double quotes
+let g:prettier#config#trailing_comma = 'all' " add trailing commas wherever possible
+let g:prettier#config#tab_width = 2 " set the tab width to 2 spaces
+let g:prettier#config#jsx_bracket_same_line = v:true " put the > of a multi-line JSX element at the end of the last line instead of being alone on the next line
+
+" Enable format on save for Prettier
+autocmd BufWritePre *.* :Prettier | w
+
+augroup Prettier
+  autocmd!
+  autocmd BufWritePre *.*, :Prettier
+augroup END
+
 
 """"""""""""""""""""""""""""vim-devicons""""""""""""""""""""""""""""""
 set guifont=DroidSansMono\ Nerd\ Font\ 11
@@ -57,6 +74,7 @@ let g:coc_global_extensions = [
   \ 'coc-css', 
   \ 'coc-python',
   \ 'coc-sh',
+  \ 'coc-prettier',
   \ ]
 
 au BufNewFile,BufRead *.ejs set filetype=html
