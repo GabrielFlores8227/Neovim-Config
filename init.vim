@@ -4,7 +4,9 @@
 filetype on
 syntax on
 set encoding=UTF-8
+
 let g:coc_disable_startup_warning = 1
+
 let NERDTreeShowHidden=1
 
 call plug#begin()
@@ -26,8 +28,7 @@ Plug 'sheerun/vim-polyglot'
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
-" Vim-monokai-tasty color theme
-Plug 'patstockwell/vim-monokai-tasty'
+Plug 'crusoexia/vim-monokai'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -56,7 +57,7 @@ augroup END
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 """"""""""""""""""""""""""""monokay setup"""""""""""""""""""""""""""""
-colorscheme vim-monokai-tasty
+colorscheme monokai
 
 """"""""""""""""""""""""""""nerdtree setup""""""""""""""""""""""""""""
 nmap <C-n> :NERDTreeToggle<CR>
@@ -65,7 +66,6 @@ let g:NERDTreeDirArrowExpandable="📁"
 let g:NERDTreeDirArrowCollapsible="📂"
 
 """"""""""""""""""""""""""""coc.nvim setup""""""""""""""""""""""""""""
-
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
