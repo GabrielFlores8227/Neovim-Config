@@ -7,7 +7,7 @@
   - nerdfonts 
   
 ## Deb-driver (auto-installer)
-deb-driver is a auto-pilot nvim and plugs installer for debian environment
+Simplify the setup of Neovim and its plugins on Debian-based systems with Deb-Driver, the auto-pilot installer that takes care of everything for you
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/deb-driver.sh && ./nvim/deb-driver.sh
