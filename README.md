@@ -10,7 +10,7 @@
   - python3-pip
   - nerdfonts 
   
-## ⚡ Quick Installation
+## ⚡ Quick Installation (Beta)
 Simplify the setup of Neovim and its plugins on Linux Os with linux-driver.sh
 
 ```bash
