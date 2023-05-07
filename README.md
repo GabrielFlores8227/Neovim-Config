@@ -14,7 +14,7 @@
 Simplify the setup of Neovim and its plugins on Linux Os with linux-driver.sh
 
 ```bash
-git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/deb-driver.sh && ./nvim/deb-driver.sh
+git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/linux-driver.sh && ./nvim/linux-driver.sh
 ```
 
 ## 🌟 Copy and Paste (init.vim)
