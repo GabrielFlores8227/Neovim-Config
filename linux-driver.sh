@@ -79,7 +79,6 @@ function unzipDriver() {
 function nerdFontsDriver() {
     TEMP=$(mktemp)
     wget -O $TEMP https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip && unzip $TEMP -d $HOME/.fonts
-    fc-cache -fv
 }
 
 # Install vim-plug
@@ -101,8 +100,7 @@ function gitDriver() {
 
 # Install nvim-plugs
 function nvimPlugsDriver() {
-    git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim
-    rm -r $HOME/.config/nvim/assets && rm $HOME/.config/nvim/README.md $HOME/.config/nvim/deb-driver.sh 
+    git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && rm -r $HOME/.config/nvim/assets $HOME/.config/nvim/README.md $HOME/.config/nvim/*.sh 
 }
 
 function executeDriver() {
