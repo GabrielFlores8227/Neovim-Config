@@ -11,10 +11,10 @@
   - nerdfonts 
   
 ## ⚡ Quick Installation (Beta)
-Simplify the setup of Neovim and its plugins on Linux Os with linux-driver.sh
+Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
 
 ```bash
-git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/linux-driver.sh && ./nvim/linux-driver.sh
+git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
 ```
 
 ## 🌟 Copy and Paste (init.vim)
