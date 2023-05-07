@@ -11,7 +11,7 @@
   - nerdfonts 
   
 ## ⚡ Quick Installation
-Simplify the setup of Neovim and its plugins on Debian-based systems with deb-driver.sh
+Simplify the setup of Neovim and its plugins on Linux Os with linux-driver.sh
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/deb-driver.sh && ./nvim/deb-driver.sh
