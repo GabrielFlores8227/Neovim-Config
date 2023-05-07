@@ -23,8 +23,10 @@ git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/linux-dri
 :set number
 :set autoindent
 :set nowrap
+
 filetype on
 syntax on
+
 set encoding=UTF-8
 
 let g:coc_disable_startup_warning = 1
@@ -254,4 +256,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
 ```
