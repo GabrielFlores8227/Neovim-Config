@@ -1,8 +1,10 @@
 :set number
 :set autoindent
 :set nowrap
+
 filetype on
 syntax on
+
 set encoding=UTF-8
 
 let g:coc_disable_startup_warning = 1
