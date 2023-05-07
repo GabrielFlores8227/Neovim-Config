@@ -3,6 +3,8 @@
 # Detect the package manager
 if command -v apt >/dev/null; then
   package_manager="apt"
+elif command -v zypper >/dev/null; then
+  package_manager="zypper"
 elif command -v yum >/dev/null; then
   package_manager="yum"
 elif command -v dnf >/dev/null; then
@@ -20,6 +22,8 @@ function python3Driver() {
     sudo apt install -y python3 python3-pip
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo $package_manager install -y python3 python3-pip
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper -n install python3 python3-pip
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm python python-pip
   fi
@@ -34,6 +38,10 @@ function yarnDriver() {
       sudo apt-get install -y yarn
     elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
       curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo && sudo $package_manager install yarn
+    elif [[ "$package_manager" == "zypper" ]]; then
+      sudo zypper ar -f https://download.opensuse.org/repositories/devel:languages:nodejs/openSUSE_Tumbleweed/ nodejs
+      sudo zypper refresh
+      sudo zypper -n install yarn
     elif [[ "$package_manager" == "pacman" ]]; then
       sudo pacman -S --noconfirm yarn
     fi
@@ -47,10 +55,31 @@ function nodejsDriver() {
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
     sudo $package_manager install -y nodejs
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper -n install nodejs16
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm nodejs npm
   fi
 }
+
+#!/bin/bash
+
+# Detect the package manager
+if command -v zypper >/dev/null; then
+  package_manager="zypper"
+elif command -v apt >/dev/null; then
+  package_manager="apt"
+elif command -v yum >/dev/null; then
+  package_manager="yum"
+elif command -v dnf >/dev/null; then
+  package_manager="dnf"
+elif command -v pacman >/dev/null; then
+  package_manager="pacman"
+else
+  echo "Package manager not found"
+  echo -e "\n\033[0;37;41m[x] Package manager not found | PRESS ENTER TO EXIT\033[0m"
+  exit 1
+fi
 
 # Install Neovim
 function neovimDriver() {
@@ -59,6 +88,8 @@ function neovimDriver() {
     sudo apt install -y neovim python3-neovim
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo $package_manager install -y neovim python3-neovim
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y neovim python3-neovim
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm neovim python-neovim
   fi
@@ -70,6 +101,8 @@ function unzipDriver() {
     sudo apt-get install -y unzip
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo $package_manager install -y unzip
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y unzip
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm unzip
   fi
@@ -93,6 +126,8 @@ function gitDriver() {
     sudo apt-get install -y git
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo $package_manager install -y git
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y git
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm git
   fi
@@ -104,15 +139,17 @@ function nvimPlugsDriver() {
 }
 
 function executeDriver() {
-    	echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
+      echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
       && eval $2 \
       && echo -e "\n\033[0;37;42m[v] $1 is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
-      || echo -e "\n\033[0;37;41m[x] $1 could not be installed | PRESS ENTER TO EXIT\033[0m" && read -sp ""
+      || echo -e "\n\033[0;37;41m[x] $1 could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
 }
 
+
 # Main
-# Update packages information 
-if [[ "$package_manager" == "apt" ]]; then
+if [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper update
+elif [[ "$package_manager" == "apt" ]]; then
     sudo apt-get update
 elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo yum update
