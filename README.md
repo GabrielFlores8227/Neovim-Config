@@ -1,4 +1,8 @@
-## Requirements
+## 💻 Interface
+
+<img src="https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif"/>
+
+## ⚠️ Requirements
   - node.js
   - npm
   - yarn
@@ -6,14 +10,14 @@
   - python3-pip
   - nerdfonts 
   
-## Deb-driver (auto-installer)
-Simplify the setup of Neovim and its plugins on Debian-based systems with Deb-Driver, the auto-pilot installer that takes care of everything for you
+## ⚡ Quick Installation
+Simplify the setup of Neovim and its plugins on Debian-based systems with deb-driver.sh
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/deb-driver.sh && ./nvim/deb-driver.sh
 ```
 
-## Copy and Paste (init.vim)
+## 🌟 Copy and Paste (init.vim)
 
 ```vim
 :set number
