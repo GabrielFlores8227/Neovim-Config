@@ -58,7 +58,7 @@ function neovimDriver() {
   if [[ "$package_manager" == "apt" ]]; then
     sudo apt install -y neovim python3-neovim
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
-    sudo $package_manager install -y neovim python3-neovim
+    sudo $package_manager install -y neovim
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm neovim python-neovim
   fi
