@@ -33,7 +33,7 @@ function yarnDriver() {
     if [[ "$package_manager" == "apt" ]]; then
       sudo apt-get install -y yarn
     elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
-      sudo $package_manager install -y yarn
+      curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo && sudo $package_manager install yarn
     elif [[ "$package_manager" == "pacman" ]]; then
       sudo pacman -S --noconfirm yarn
     fi
