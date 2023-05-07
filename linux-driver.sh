@@ -101,7 +101,6 @@ function gitDriver() {
 
 # Install nvim-plugs
 function nvimPlugsDriver() {
-    mkdir -p $HOME/.config && mkdir -p $HOME/.config/nvim
     git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim
     rm -r $HOME/.config/nvim/assets && rm $HOME/.config/nvim/README.md $HOME/.config/nvim/deb-driver.sh 
 }
