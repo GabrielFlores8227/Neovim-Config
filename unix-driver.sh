@@ -57,7 +57,6 @@ function nodejsDriver() {
 
 # Install Neovim
 function neovimDriver() {
-  # Install dependencies
   if [[ "$package_manager" == "brew" ]]; then
     curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz
     tar xzf nvim-macos.tar.gz
