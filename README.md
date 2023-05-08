@@ -3,12 +3,11 @@
 <img src="https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif"/>
 
 ## ⚠️ Requirements
-  - node.js
-  - npm
-  - yarn
-  - python3
-  - python3-pip
-  - nerdfonts 
+  - Node.js
+  - Npm
+  - Yarn
+  - Python3 & Python3-pip
+  - NerdFonts 
   
 ## 📙 Support for
   - Node.js
