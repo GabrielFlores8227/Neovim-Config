@@ -64,14 +64,17 @@ function yarnDriver() {
 # Install Neovim
 function neovimDriver() {
   # Install dependencies
-  if [[ "$package_manager" == "apt" ]]; then
-    sudo apt install -y neovim python3-neovim
-  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
-    sudo $package_manager install -y neovim python3-neovim
-  elif [[ "$package_manager" == "pacman" ]]; then
-    sudo pacman -S --noconfirm neovim python-neovim
-  elif [[ "$package_manager" == "brew" ]]; then
-    brew install neovim
+  if [[ "$package_manager" == "brew" ]]; then
+    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz
+    tar xzf nvim-macos.tar.gz
+    ./nvim-macos/bin/nvim
+  else
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    ./nvim.appimage --appimage-extract
+    ./squashfs-root/AppRun --version
+    sudo mv squashfs-root /
+    sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
   fi
 }
 
