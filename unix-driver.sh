@@ -45,7 +45,7 @@ function nodejsDriver() {
     sudo apt-get install -y nodejs
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-    sudo $package_manager install -y nodejs
+    sudo $package_manager install -y nodejs --nobest
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm nodejs npm
   elif [[ "$package_manager" == "zypper" ]]; then
@@ -102,6 +102,32 @@ elif [[ "$package_manager" == "zipper" ]]; then
   fi
 }
 
+# Install Wget
+function wgetDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt-get update
+    sudo apt-get install -y wget
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y wget
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm wget
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y wget
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install wget
+  fi
+}
+
+# Install Nerd-Fonts
+function nerdFontsDriver() {
+    TEMP=$(mktemp)
+    if [[ "$package_manager" == "brew" ]]; then
+        curl -L -o $TEMP https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip && unzip $TEMP -d $HOME/Library/Fonts/
+    else
+        wget -O $TEMP https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip && unzip $TEMP -d $HOME/.fonts
+    fi
+}
+
 # Install Vim-Plug
 function vimPlugDriver() {
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -121,17 +147,6 @@ function gitDriver() {
   elif [[ "$package_manager" == "brew" ]]; then
     brew install git
   fi
-}
-
-
-# Install Nerd-Fonts
-function nerdFontsDriver() {
-    TEMP=$(mktemp)
-    if [[ "$package_manager" == "brew" ]]; then
-        curl -L -o $TEMP https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip && unzip $TEMP -d $HOME/Library/Fonts/
-    else
-        wget -O $TEMP https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/3270.zip && unzip $TEMP -d $HOME/.fonts
-    fi
 }
 
 # Install Neovim-Plugs
@@ -165,6 +180,7 @@ executeDriver "yarn" "yarnDriver"
 executeDriver "node.js" "nodejsDriver"
 executeDriver "neovim" "neovimDriver"
 executeDriver "unzip" "unzipDriver"
+executeDriver "wget" "wgetDriver"
 executeDriver "nerd-fonts" "nerdFontsDriver"
 executeDriver "vim-plug" "vimPlugDriver"
 executeDriver "git" "gitDriver"
