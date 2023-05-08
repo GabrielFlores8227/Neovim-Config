@@ -18,6 +18,19 @@
   - Python
   - Bash
   
+ ## ⌨️ Keyboard shotcuts
+  - CTRL-n: Toggle NERDTree
+  - <TAB>: Trigger completion with characters ahead and navigate.
+  - <S-TAB>: Navigate backward in completion popup.
+  - <CR>: Accept selected completion item or format.
+  - <c-space>: Trigger completion.
+  - [g: Navigate to the previous diagnostic.
+  - ]g: Navigate to the next diagnostic.
+  - gd: Go to the definition of the symbol under the cursor.
+  - gy: Go to the type definition of the symbol under the cursor.
+  - gi: Go to the implementation of the symbol under the cursor.
+  - gr: Go to the references of the symbol under the cursor.
+  
 ## ⚡ Quick Installation (Beta)
 Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
 
