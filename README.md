@@ -10,13 +10,13 @@
   - NerdFonts 
   
 ## 📙 Support for
+  - Python
+  - Bash
   - Node.js
   - TypeScript
   - JavaScript
   - Html
   - Css
-  - Python
-  - Bash
 
 ## ⚡ Quick Installation (Beta)
 Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
