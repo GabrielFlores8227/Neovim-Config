@@ -24,7 +24,7 @@ Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
 ```
-## 🐢 Manus installation
+## 🐢 Manual installation
 
 ### Windows
   - Install all required packages.
