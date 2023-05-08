@@ -40,7 +40,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Directory tree
 Plug 'preservim/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 """"""""""""""""""""""""""""prettier setup""""""""""""""""""""""""""""
