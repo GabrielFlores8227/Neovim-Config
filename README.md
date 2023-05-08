@@ -18,12 +18,44 @@
   - Html
   - Css
 
-## ⚡ Quick Installation (Beta)
+## ⚡ Quick installation (Beta)
 Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
 ```
+## 🐢 Manus installation
+
+### Windows
+  - Install all required packages.
+     - Node.js
+    - Npm
+    - Yarn
+    - Python3 & Python3-pip
+    - NerdFonts 
+    
+  - Download the latest version of Neovim from the official website at https://github.com/neovim/neovim/releases. Choose the appropriate version for your system (either 32-bit or 64-bit) and download the ZIP file.
+
+  - Extract the contents of the ZIP file to a folder on your computer, such as C:\neovim.
+
+  - Add the nvim folder to your system's PATH environment variable.
+    - Open the Start menu and search for "Environment Variables".
+    - Click "Edit the system environment variables".
+    - Click the "Environment Variables" button.
+    - Under "System Variables", scroll down and find the "Path" variable.
+    - Click "Edit".
+    - Click "New" and add the path to the nvim folder, such as C:\neovim\bin.
+    - Click "OK" on all windows to save the changes.
+
+  - Next, you need to install Plug, a popular plugin manager for Neovim. To do this, open a command prompt and run the following command:
+  
+  ```powershell
+  iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+  ni "$HOME\AppData\Local\nvim\autoload" -Force
+  ```
+  - Finally, copy the init.vim file in the Neovim configuration directory. This file will contain your Neovim settings and plugin configurations. The default location of this file is C:\Users\YourUsername\AppData\Local\nvim\init.vim.
+  
+  - Launch Neovim by opening a command prompt and typing nvim. Once Neovim is running, type :PlugInstall to install the plugins specified in your init.vim file.
   
  ## ⌨️ Keyboard shotcuts
   - CTRL-n: Toggle NERDTree
