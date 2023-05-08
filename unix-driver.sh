@@ -107,13 +107,6 @@ function vimPlugDriver() {
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 }
 
-function executeDriver() {
-      echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
-      && eval $2 \
-      && echo -e "\n\033[0;37;42m[v] $1 is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
-      || echo -e "\n\033[0;37;41m[x] $1 could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
-}
-
 function gitDriver() {
   if [[ "$package_manager" == "apt" ]]; then
     sudo apt-get install -y git
@@ -128,6 +121,13 @@ function gitDriver() {
 
 function nvimPlugsDriver() {
     git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && rm -r $HOME/.config/nvim/assets $HOME/.config/nvim/README.md $HOME/.config/nvim/*.sh 
+}
+
+function executeDriver() {
+      echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
+      && eval $2 \
+      && echo -e "\n\033[0;37;42m[v] $1 is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
+      || echo -e "\n\033[0;37;41m[x] $1 could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
 }
 
 #---Main---------------------------------------------------------------------------------------------
