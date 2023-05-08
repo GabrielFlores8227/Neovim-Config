@@ -19,7 +19,7 @@
   - Css
 
 ## ⚡ Quick installation (Beta)
-Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
+Streamline the process of configuring Neovim and its plugins on Unix (support for apt, yum, dnf, pacman, zypper and brew) systems with the help of unix-driver.sh
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
