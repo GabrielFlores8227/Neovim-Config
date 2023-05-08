@@ -17,6 +17,13 @@
   - Css
   - Python
   - Bash
+
+## ⚡ Quick Installation (Beta)
+Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
+
+```bash
+git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
+```
   
  ## ⌨️ Keyboard shotcuts
   - CTRL-n: Toggle NERDTree
@@ -30,13 +37,6 @@
   - gy: Go to the type definition of the symbol under the cursor.
   - gi: Go to the implementation of the symbol under the cursor.
   - gr: Go to the references of the symbol under the cursor.
-  
-## ⚡ Quick Installation (Beta)
-Simplify the setup of Neovim and its plugins on Unix with unix-driver.sh
-
-```bash
-git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
-```
 
 ## 🌟 Copy and Paste (init.vim)
 
