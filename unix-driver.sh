@@ -131,9 +131,7 @@ function nvimPlugsDriver() {
 }
 
 #---Main---------------------------------------------------------------------------------------------
-if [[ "$package_manager" == "zypper" ]]; then
-    sudo zypper update
-elif [[ "$package_manager" == "apt" ]]; then
+if [[ "$package_manager" == "apt" ]]; then
     sudo apt-get update
 elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo yum update
