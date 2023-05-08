@@ -61,7 +61,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Directory tree
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
