@@ -33,7 +33,7 @@ set nowritebackup
 set updatetime=300
 set signcolumn=yes
 
-let g:coc_disable_startup_warning = 1
+" let g:coc_disable_startup_warning = 1
 let NERDTreeShowHidden=1
 
 call plug#begin()
