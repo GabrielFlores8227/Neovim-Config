@@ -36,6 +36,7 @@ function python3Driver() {
 
   # Install Neovim Python package
   sudo python3 -m pip install neovim
+  sudo python3 -m pip install jedi
 }
 
 # Install Node.js
