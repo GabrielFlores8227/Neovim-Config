@@ -176,8 +176,8 @@ fi
 
 
 executeDriver "python" "python3Driver"
-executeDriver "yarn" "yarnDriver"
 executeDriver "node.js" "nodejsDriver"
+executeDriver "yarn" "yarnDriver"
 executeDriver "neovim" "neovimDriver"
 executeDriver "unzip" "unzipDriver"
 executeDriver "wget" "wgetDriver"
