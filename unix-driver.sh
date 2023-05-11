@@ -42,11 +42,11 @@ function python3Driver() {
 # Install Node.js
 function nodejsDriver() {
   if [[ "$package_manager" == "apt" ]]; then
-    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-    sudo apt-get install -y nodejs
+    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
+    && sudo apt-get install -y nodejs
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
-    curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-    sudo $package_manager install -y nodejs --nobest
+    curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash - \
+    && sudo $package_manager install -y nodejs --nobest
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm nodejs npm
   elif [[ "$package_manager" == "zypper" ]]; then
@@ -59,16 +59,16 @@ function nodejsDriver() {
 # Install Neovim
 function neovimDriver() {
   if [[ "$package_manager" == "brew" ]]; then
-    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz
-    tar xzf nvim-macos.tar.gz
-    ./nvim-macos/bin/nvim
+    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz \
+    && tar xzf nvim-macos.tar.gz \
+    && ./nvim-macos/bin/nvim
   else
-    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-    chmod u+x nvim.appimage
-    ./nvim.appimage --appimage-extract
-    ./squashfs-root/AppRun --version
-    sudo mv squashfs-root /
-    sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage \
+    && chmod u+x nvim.appimage \
+    && ./nvim.appimage --appimage-extract \
+    && ./squashfs-root/AppRun --version \
+    && sudo mv squashfs-root / \
+    && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
   fi
 }
 
@@ -105,8 +105,8 @@ elif [[ "$package_manager" == "zipper" ]]; then
 # Install Wget
 function wgetDriver() {
   if [[ "$package_manager" == "apt" ]]; then
-    sudo apt-get update
-    sudo apt-get install -y wget
+    sudo apt-get update \
+    && sudo apt-get install -y wget
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
     sudo $package_manager install -y wget
   elif [[ "$package_manager" == "pacman" ]]; then
