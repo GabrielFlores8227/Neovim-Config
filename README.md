@@ -55,6 +55,7 @@ set nobackup
 set nowritebackup
 set updatetime=300
 set signcolumn=yes
+set clipboard+=unnamedplus
 
 " let g:coc_disable_startup_warning = 1
 let NERDTreeShowHidden=1
