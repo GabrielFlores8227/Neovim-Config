@@ -39,6 +39,21 @@ function python3Driver() {
   python3 -m pip install jedi
 }
 
+#Install Curl
+function curlDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt install -y curl
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y curl
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm curl
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y curl
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install curl
+  fi
+}
+
 # Install Node.js
 function nodejsDriver() {
   if [[ "$package_manager" == "apt" ]]; then
@@ -176,6 +191,7 @@ fi
 
 
 executeDriver "python" "python3Driver"
+executeDriver "curl" "curlDriver"
 executeDriver "node.js" "nodejsDriver"
 executeDriver "yarn" "yarnDriver"
 executeDriver "neovim" "neovimDriver"
