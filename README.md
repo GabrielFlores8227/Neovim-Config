@@ -1,27 +1,27 @@
 ## 💻 Interface
 
-Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins
+Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins.
 
-<img src="https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif"/>
+![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif)
 
-## ⚠️ Required packages
-  - Node.js
-  - Npm
-  - Yarn
-  - Python3 & Python3-pip
-  - NerdFonts 
-  
+## ⚠️ Required Packages
+- Node.js
+- Npm
+- Yarn
+- Python3 & Python3-pip
+- NerdFonts
+
 ## 📙 Support for
-  - Python
-  - Bash
-  - Node.js
-  - TypeScript
-  - JavaScript
-  - Html
-  - Css
+- Python
+- Bash
+- Node.js
+- TypeScript
+- JavaScript
+- HTML
+- CSS
 
-## ⚡ Quick installation (Beta)
-Streamline the process of configuring Neovim and its plugins on Unix systems with the help of unix-driver.sh (unix-driver.sh will install Neovim, plugs and required packages)
+## ⚡ Quick Installation (Beta)
+Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Neovim, plugins, and required packages.
 
 ```bash
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
