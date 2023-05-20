@@ -57,10 +57,10 @@ function curlDriver() {
 # Install Node.js
 function nodejsDriver() {
   if [[ "$package_manager" == "apt" ]]; then
-    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
-    && sudo apt-get install -y nodejs
+    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+    sudo apt-get install -y nodejs
   elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
-    curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash - \
+    curl -sL https://rpm.nodesource.com/setup_20.x | sudo bash - \
     && sudo $package_manager install -y nodejs --nobest
   elif [[ "$package_manager" == "pacman" ]]; then
     sudo pacman -S --noconfirm nodejs npm
