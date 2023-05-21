@@ -19,6 +19,7 @@ Unlock the full potential of your Neovim editor and elevate it to an IDE workspa
 - JavaScript
 - HTML
 - CSS
+- Others
 
 ## ⚡ Quick Installation (Beta)
 Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Neovim, plugins, and required packages.
