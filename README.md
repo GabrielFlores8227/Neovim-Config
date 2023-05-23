@@ -1,4 +1,4 @@
-## 💻 Interface
+# 💻 Neovim Setup
 
 Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins.
 
