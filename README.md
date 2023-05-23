@@ -1,4 +1,4 @@
-# 💻 Neovim Setup
+# ⭐ Neovim Setup
 
 Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins.
 
@@ -31,7 +31,7 @@ Streamline the process of configuring Neovim and its plugins on Unix systems wit
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
 ```
 
-## ⭐ Copy [init.vim](https://github.com/GabrielFlores8227/Neovim-Setup/blob/main/init.vim)
+## 💻 Copy [init.vim](https://github.com/GabrielFlores8227/Neovim-Setup/blob/main/init.vim)
 
 ```vim
 " Enable line numbers
