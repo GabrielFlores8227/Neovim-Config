@@ -31,6 +31,35 @@ Streamline the process of configuring Neovim and its plugins on Unix systems wit
 git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./nvim/unix-driver.sh && ./nvim/unix-driver.sh
 ```
 
+## 📎 Keybindings
+
+- Enable line numbers: `set number`
+- Enable auto-indentation: `set autoindent`
+- Disable line wrapping: `set nowrap`
+- Enable file type detection: `filetype on`
+- Enable syntax highlighting: `syntax on` and `syntax enable`
+- Set encoding to UTF-8: `set encoding=UTF-8`
+- Disable backup files: `set nobackup` and `set nowritebackup`
+- Set the updatetime for CursorHold events: `set updatetime=300`
+- Show sign column for diagnostics and signs: `set signcolumn=yes`
+- Enable system clipboard integration: `set clipboard+=unnamedplus`
+- NERDTree configuration:
+  - Show hidden files: `let NERDTreeShowHidden=1`
+  - Toggle NERDTree: `nmap <C-n> :NERDTreeToggle<CR>`
+- Plugin management:
+  - Initialize the plugin manager: `call plug#begin()`
+  - Configure plugins (e.g., Prettier, NerdTree, Vim devicons): `Plug 'plugin-name'`
+  - End plugin manager initialization: `call plug#end()`
+- Prettier configuration: Configure Prettier options (e.g., single_quote, trailing_comma) using `let g:prettier#config#option = value`
+- Format on save with Prettier: `autocmd BufWritePre *.* :Prettier | w`
+- Vim-devicons configuration:
+  - Set font for file icons: `set guifont=DroidSansMono\ Nerd\ Font\ 11`
+- Colorscheme: `colorscheme dracula` (replace "dracula" with your desired colorscheme)
+- coc.nvim configuration:
+  - Set global extensions: `let g:coc_global_extensions = ['coc-extension1', 'coc-extension2']`
+- Key mappings for coc.nvim: Define key mappings using `nmap`, `xmap`, `imap`, etc.
+- Miscellaneous keybindings: Add your remaining configurations and mappings here
+
 ## 💻 Copy [init.vim](https://github.com/GabrielFlores8227/Neovim-Setup/blob/main/init.vim)
 
 ```vim
