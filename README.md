@@ -28,7 +28,7 @@ Unlock the full potential of your Neovim editor and elevate it to an IDE workspa
 Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Neovim, plugins, and required packages.
 
 ```bash
-git clone https://github.com/GabrielFlores8227/nvim && chmod +x ./Neovim-Config/unix-driver.sh && ./Neovim-Config/unix-driver.sh
+git clone https://github.com/GabrielFlores8227/https://github.com/GabrielFlores8227/Neovim-Config && chmod +x ./Neovim-Config/unix-driver.sh && ./Neovim-Config/unix-driver.sh
 ```
 
 ## 📎 Keybindings
