@@ -160,7 +160,7 @@ function wgetDriver() {
 # Install Nerd-Fonts
 function nerdFontsDriver() {
     TEMP=$(mktemp)
-    URL="https://objects.githubusercontent.com/github-production-release-asset-2e65be/27574418/0b78d1bf-654f-4212-b0a3-526d0c0f7f2a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230523%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230523T191531Z&X-Amz-Expires=300&X-Amz-Signature=2e794340f67b03ed2c3277954624ad45df1d3bb73b775b48d6c2de4a21bcc5fe&X-Amz-SignedHeaders=host&actor_id=108844543&key_id=0&repo_id=27574418&response-content-disposition=attachment%3B%20filename%3DAnonymousPro.zip&response-content-type=application%2Foctet-stream"
+    URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/AnonymousPro.zip"
     
     if [[ "$package_manager" == "brew" ]]; then
         curl -L -o $TEMP $URL  && unzip $TEMP -d $HOME/Library/Fonts/
