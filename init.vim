@@ -12,6 +12,7 @@ filetype on
 
 " Enable syntax highlighting
 syntax on
+syntax enable
 
 " Set encoding to UTF-8
 set encoding=UTF-8
@@ -59,8 +60,8 @@ Plug 'sheerun/vim-polyglot'
 " Lightline.vim for a customizable statusline/tabline
 Plug 'itchyny/lightline.vim'
 
-" Monokai colorscheme
-Plug 'crusoexia/vim-monokai'
+" Dracula colorscheme
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " coc.nvim for autocompletion and language server integration
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -86,8 +87,105 @@ augroup END
 " Configure vim-devicons
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
-" Set Monokai colorscheme
-colorscheme monokai
+" Set Colorscheme
+colorscheme dracula
+
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \   'right': [ [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'fileencoding', 'fileformat', 'filetype' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head'
+  \ },
+  \ 'component_expand': {
+  \   'filetype': 'lightline#filetype#default',
+  \   'lineinfo': 'lightline#lineinfo#percentage',
+  \   'percent': 'lightline#percent#data',
+  \   'gitbranch': 'lightline#gitbranch#branchname'
+  \ },
+  \ 'component_type': {
+  \   'gitbranch': 'readonly'
+  \ }
+\ }
+
+let g:lightline.colorscheme = 'one'
+let g:lightline.active = {
+  \ 'left': [ [ 'mode', 'paste' ],
+  \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \ 'right': [ [ 'lineinfo' ],
+  \            [ 'percent' ],
+  \            [ 'fileencoding', 'fileformat', 'filetype' ] ]
+\ }
+
+let g:lightline.component_function = {
+  \ 'gitbranch': 'fugitive#head'
+\ }
+
+let g:lightline.component_expand = {
+  \ 'filetype': 'lightline#filetype#default',
+  \ 'lineinfo': 'lightline#lineinfo#percentage',
+  \ 'percent': 'lightline#percent#data',
+  \ 'gitbranch': 'lightline#gitbranch#branchname'
+\ }
+
+let g:lightline.component_type = {
+  \ 'gitbranch': 'readonly'
+\ }
+
+let g:lightline.separator = {
+  \ 'left': '',
+  \ 'right': ''
+\ }
+
+let g:lightline.subseparator = {
+  \ 'left': '',
+  \ 'right': ''
+\ }
+
+let g:lightline.tabline = {
+  \ 'left': [ [ 'buffers' ],
+  \           [ 'tabnum' ] ],
+  \ 'right': [ [ 'close' ] ]
+\ }
+let g:lightline.component_type = {
+  \ 'gitbranch': 'readonly'
+\ }
+let g:lightline.active = {
+  \ 'left': [ [ 'mode', 'paste' ],
+  \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \ 'right': [ [ 'lineinfo' ],
+  \            [ 'percent' ],
+  \            [ 'fileencoding', 'fileformat', 'filetype' ] ]
+\ }
+let g:lightline.component_expand = {
+  \ 'filetype': 'lightline#filetype#default',
+  \ 'lineinfo': 'lightline#lineinfo#percentage',
+  \ 'percent': 'lightline#percent#data',
+  \ 'gitbranch': 'lightline#gitbranch#branchname'
+\ }
+
+let g:lightline.colorscheme = 'one'
+let g:lightline.separator = {
+  \ 'left': '',
+  \ 'right': ''
+\ }
+let g:lightline.subseparator = {
+  \ 'left': '',
+  \ 'right': ''
+\ }
+let g:lightline.tabline = {
+  \ 'left': [ [ 'buffers' ],
+  \           [ 'tabnum' ] ],
+  \ 'right': [ [ 'close' ] ]
+\ }
+
+" Set the background to dark
+let g:lightline.colorscheme = 'dracula'
 
 " NERDTree key mapping
 nmap <C-n> :NERDTreeToggle<CR>
@@ -106,7 +204,12 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-sh',
   \ 'coc-prettier',
+  \ 'coc-docker',
+  \ 'coc-yaml',
+  \ 'coc-xml',
+  \ 'coc-graphql',
   \ ]
+
 
 " Key mappings for coc.nvim
 inoremap <silent><expr> <TAB>
