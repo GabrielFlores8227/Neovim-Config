@@ -125,8 +125,9 @@ Plug 'sheerun/vim-polyglot'
 " Lightline.vim for a customizable statusline/tabline
 Plug 'itchyny/lightline.vim'
 
-" Dracula colorscheme
+" Colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'crusoexia/vim-monokai'
 
 " coc.nvim for autocompletion and language server integration
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -151,9 +152,6 @@ augroup END
 
 " Configure vim-devicons
 set guifont=DroidSansMono\ Nerd\ Font\ 11
-
-" Set Colorscheme
-colorscheme dracula
 
 let g:lightline = {
   \ 'colorscheme': 'one',
@@ -250,6 +248,9 @@ let g:lightline.tabline = {
 \ }
 
 " Set the background to dark
+" colorscheme monokai
+colorscheme dracula
+
 let g:lightline.colorscheme = 'dracula'
 
 " NERDTree key mapping
@@ -272,7 +273,6 @@ let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-yaml',
   \ 'coc-xml',
-  \ 'coc-graphql',
   \ ]
 
 
