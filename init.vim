@@ -182,10 +182,10 @@ let g:lightline.tabline = {
   \ 'right': [ [ 'close' ] ]
 \ }
 
-" Set the background to dark
+" Colorscheme (Monokai and Dracula)
 " colorscheme monokai
-colorscheme dracula
 
+colorscheme dracula
 let g:lightline.colorscheme = 'dracula'
 
 " NERDTree key mapping
