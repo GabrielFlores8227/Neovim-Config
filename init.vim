@@ -33,10 +33,6 @@ let NERDTreeShowHidden=1
 syntax on
 syntax enable
 
-" Colorscheme setup (Monokai and Dracula)
-" colorscheme monokai
-colorscheme dracula
-
 " Initialize the plugin manager
 call plug#begin()
 
@@ -187,6 +183,11 @@ let g:lightline.tabline = {
   \ 'right': [ [ 'close' ] ]
 \ }
 
+" Colorscheme monokai
+" colorscheme monokai
+
+" Colorscheme dracula
+colorscheme dracula
 let g:lightline.colorscheme = 'dracula'
 
 " NERDTree key mapping
