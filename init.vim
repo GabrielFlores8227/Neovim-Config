@@ -35,9 +35,7 @@ syntax enable
 
 " Colorscheme setup (Monokai and Dracula)
 " colorscheme monokai
-
 colorscheme dracula
-let g:lightline.colorscheme = 'dracula'
 
 " Initialize the plugin manager
 call plug#begin()
@@ -94,7 +92,7 @@ augroup END
 " Configure vim-devicons
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
-" Statusline config
+" Statusline setup
 let g:lightline = {
   \ 'colorscheme': 'one',
   \ 'active': {
@@ -188,6 +186,8 @@ let g:lightline.tabline = {
   \           [ 'tabnum' ] ],
   \ 'right': [ [ 'close' ] ]
 \ }
+
+let g:lightline.colorscheme = 'dracula'
 
 " NERDTree key mapping
 nmap <C-n> :NERDTreeToggle<CR>
