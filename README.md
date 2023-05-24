@@ -1,6 +1,6 @@
 # ⭐ Neovim Config
 
-Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins.
+This repository contains my personal Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow. 
 
 ![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/image.gif)
 
