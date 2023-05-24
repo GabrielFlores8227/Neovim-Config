@@ -4,7 +4,7 @@ Unlock the full potential of your Neovim editor and elevate it to an IDE workspa
 
 ![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/image.gif)
 
-## ⚠️ MMain Required Packages
+## ⚠️ Main Required Packages
 - Node.js
 - Npm
 - Yarn
