@@ -2,7 +2,7 @@
 
 Unlock the full potential of your Neovim editor and elevate it to an IDE workspace with these essential customizations and plugins.
 
-![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif)
+![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/image.gif)
 
 ## ⚠️ Required Packages
 - Node.js
