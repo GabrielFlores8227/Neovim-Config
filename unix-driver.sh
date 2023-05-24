@@ -25,6 +25,7 @@
 ################################################################################
 
 #---Detector-----------------------------------------------------------------------------------------
+
 # Detect the package manager
 if command -v apt >/dev/null; then
   package_manager="apt"
@@ -44,6 +45,7 @@ else
 fi
 
 #---Functions----------------------------------------------------------------------------------------
+
 # Install Python3
 function python3Driver() {
   if [[ "$package_manager" == "apt" ]]; then
@@ -108,6 +110,21 @@ function neovimDriver() {
     && ./squashfs-root/AppRun --version \
     && sudo mv squashfs-root / \
     && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+  fi
+}
+
+# Install Xclip
+function xclipDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt install -y xclip
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y xclip
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm xclip
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y xclip
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install xclip
   fi
 }
 
@@ -196,6 +213,7 @@ function nvimPlugsDriver() {
 
 }
 
+
 function executeDriver() {
       echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
       && eval $2 \
@@ -204,6 +222,8 @@ function executeDriver() {
 }
 
 #---Main---------------------------------------------------------------------------------------------
+
+# Update
 if [[ "$package_manager" == "apt" ]]; then
     sudo apt-get update
 elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
@@ -216,12 +236,13 @@ elif [[ "$package_manager" == "brew" ]]; then
     brew update
 fi
 
-
+# Install packages
 executeDriver "python" "python3Driver"
 executeDriver "curl" "curlDriver"
 executeDriver "node.js" "nodejsDriver"
 executeDriver "yarn" "yarnDriver"
 executeDriver "neovim" "neovimDriver"
+executeDriver "xclip" "xclipDriver"
 executeDriver "unzip" "unzipDriver"
 executeDriver "wget" "wgetDriver"
 executeDriver "nerd-fonts" "nerdFontsDriver"
