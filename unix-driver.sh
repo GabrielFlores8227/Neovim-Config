@@ -213,7 +213,6 @@ function nvimPlugsDriver() {
 
 }
 
-
 function executeDriver() {
       echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
       && eval $2 \
