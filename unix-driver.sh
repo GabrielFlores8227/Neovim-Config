@@ -209,7 +209,7 @@ function gitDriver() {
 
 # Install Neovim-Plugs
 function nvimPlugsDriver() {
-    git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && sudo find $HOME/.config/nvim -type f ! -name "*.vim" -exec rm {} +
+    git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && sudo find $HOME/.config/nvim -type f ! -name "*.vim" -exec rm -r {} +
 
 }
 
