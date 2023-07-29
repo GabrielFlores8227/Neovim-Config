@@ -1,6 +1,6 @@
 # ⭐ Neovim Config
 
-![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/image.gif)
+![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.gif)
 
 This repository contains my personal Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow. 
 
