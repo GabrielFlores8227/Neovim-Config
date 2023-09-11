@@ -326,7 +326,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Add your remaining configurations and mappings here
 ```
 
- ### License
+## 📖 License
 
 This script is licensed under the [MIT License](LICENSE).
 
