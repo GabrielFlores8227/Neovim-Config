@@ -328,7 +328,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 ## 📖 License
 
-This script is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+This script is licensed under the MIT License.
 
 Feel free to use, modify, and distribute this script as per the terms of the license.
 
