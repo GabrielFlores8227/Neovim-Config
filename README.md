@@ -4,7 +4,7 @@
 
 This repository contains Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow. 
 
-## ⚠️ Main Required Packages
+## ⚠️ Required Packages
 - Node.js
 - Npm
 - Yarn
