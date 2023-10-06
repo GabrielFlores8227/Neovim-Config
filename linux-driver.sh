@@ -98,9 +98,7 @@ download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-n
 download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
 
 # git
-donwload "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
+download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
 
 # neovim plugs
 git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && sudo find $HOME/.config/nvim -type f ! -name "*.vim" -exec rm -r {} +
-
-
