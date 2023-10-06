@@ -74,7 +74,7 @@ fi
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-python/latest-python.sh"
 
 # python-pip
-download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-pip/latest-pip.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-pip/latest-pip.sh" && pip install pynvim
 
 # curl
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-curl/latest-curl.sh"
