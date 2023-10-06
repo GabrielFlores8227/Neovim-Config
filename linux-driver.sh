@@ -45,7 +45,7 @@ function download_and_install() {
   local package_name=$(get_package_name $converted_url)
   local destination="/tmp/$(date +'%Y%m%d%H%M%S%N' | cut -b1-17).sh"
 
-  echo -e "\n\n\033[0;37;43m[*] download_and_installing $package_name | $destination\033[m\n"
+  echo -e "\n\n\033[0;37;43m[*] downloading $package_name | $destination\033[m\n"
 
   wget -O $destination $converted_url \
   && chmod +x $destination 
