@@ -32,7 +32,10 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 Streamline the process of configuring Neovim and its plugins on Unix systems with the help of linux-driver.sh. The script is tailored for systems supporting package managers such as apt and yum. It efficiently manages the installation of Neovim, plugins, and other required packages, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
 
 ```bash
-git clone https://github.com/GabrielFlores8227/Neovim-Config && chmod +x ./Neovim-Config/linux-driver.sh && ./Neovim-Config/linux-driver.sh
+git clone https://github.com/GabrielFlores8227/Neovim-Config \
+&& chmod +x ./Neovim-Config/linux-driver.sh \
+&& ./Neovim-Config/linux-driver.sh \
+&& pip install pynvim
 ```
 
 ## 📎 Keybindings
