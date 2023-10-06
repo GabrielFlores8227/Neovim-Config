@@ -57,6 +57,8 @@ function download_and_install() {
 # Execute
 ##
 
+echo -e "\n\033[0;37;43m[*] Some operations may require root privileges to install required packages | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
+
 if command -v apt >/dev/null; then
     sudo apt update -y && sudo apt-get install wget -y
 elif command -v yum >/dev/null; then
