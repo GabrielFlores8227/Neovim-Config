@@ -37,8 +37,6 @@ Streamline the process of configuring Neovim and its plugins on Unix systems wit
 
 - [Latest Pip Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-pip/latest-pip.sh)
   
-- pynvim (installed via pip)
-
 - [Latest Curl Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-curl/latest-curl.sh)
 
 - [Latest Node.js Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nodejs/latest-nodejs.sh)
@@ -67,6 +65,9 @@ Streamline the process of configuring Neovim and its plugins on Unix systems wit
 git clone https://github.com/GabrielFlores8227/Neovim-Config \
 && chmod +x ./Neovim-Config/linux-driver.sh \
 && ./Neovim-Config/linux-driver.sh
+```
+```bash
+pip install pynvim
 ```
 
 ## 📎 Keybindings
