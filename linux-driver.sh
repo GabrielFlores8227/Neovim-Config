@@ -101,4 +101,4 @@ download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/m
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
 
 # neovim plugs
-git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && sudo find $HOME/.config/nvim -type f ! -name "*.vim" -exec rm -r {} +
+wget -O $HOME/.config/nvim/init.vim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim)
