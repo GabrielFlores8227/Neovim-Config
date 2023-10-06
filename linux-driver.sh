@@ -58,11 +58,11 @@ function download() {
 ##
 
 if command -v apt >/dev/null; then
-    sudo apt update -y
+    sudo apt update -y && sudo apt-get install wget -y
 elif command -v yum >/dev/null; then
-    sudo yum update -y
+    sudo yum update -y && sudo yum install wget -y
 elif command -v dnf >/dev/null; then
-    sudo dnf update -y
+    sudo dnf update -y && sudo dnf install wget -y
 else
     exit 1
 fi
@@ -89,7 +89,7 @@ download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-x
 download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-unzip/latest-unzip.sh"
 
 # wget
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-wget/latest-wget.sh"
+# download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-wget/latest-wget.sh"
 
 # nerd-fonts (anonymouspro)
 download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nerdfonts-anonymouspro/latest-nerdfonts-anonymouspro.sh"
