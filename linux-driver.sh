@@ -40,12 +40,12 @@ function get_package_name() {
   echo "$filename"
 }
 
-function download() {
+function download_and_install() {
   local converted_url=$(convert_url $1)
   local package_name=$(get_package_name $converted_url)
   local destination="/tmp/$(date +'%Y%m%d%H%M%S%N' | cut -b1-17).sh"
 
-  echo -e "\n\n\033[0;37;43m[*] Downloading $package_name | $destination\033[m\n"
+  echo -e "\n\n\033[0;37;43m[*] download_and_installing $package_name | $destination\033[m\n"
 
   wget -O $destination $converted_url \
   && chmod +x $destination 
@@ -68,37 +68,37 @@ else
 fi
 
 # python
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-python/latest-python.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-python/latest-python.sh"
 
 # curl
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-curl/latest-curl.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-curl/latest-curl.sh"
 
 # nodejs
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nodejs/latest-nodejs.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nodejs/latest-nodejs.sh"
 
 # yarn
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-yarn/latest-yarn.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-yarn/latest-yarn.sh"
 
 # neovim
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-neovim/latest-neovim.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-neovim/latest-neovim.sh"
 
 # xclip
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-xclip/latest-xclip.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-xclip/latest-xclip.sh"
 
 # unzip
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-unzip/latest-unzip.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-unzip/latest-unzip.sh"
 
 # wget
-# download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-wget/latest-wget.sh"
+# download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-wget/latest-wget.sh"
 
 # nerd-fonts (anonymouspro)
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nerdfonts-anonymouspro/latest-nerdfonts-anonymouspro.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nerdfonts-anonymouspro/latest-nerdfonts-anonymouspro.sh"
 
 # vim-plug
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
 
 # git
-download "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
 
 # neovim plugs
 git clone https://github.com/GabrielFlores8227/nvim $HOME/.config/nvim && sudo find $HOME/.config/nvim -type f ! -name "*.vim" -exec rm -r {} +
