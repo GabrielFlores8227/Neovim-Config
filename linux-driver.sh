@@ -94,11 +94,11 @@ download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/m
 # nerd-fonts (anonymouspro)
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nerdfonts-anonymouspro/latest-nerdfonts-anonymouspro.sh"
 
-# vim-plug
-download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
-
 # git
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh"
+
+# vim-plug
+download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
 
 # neovim plugs
 wget -O $HOME/.config/nvim/init.vim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim)
