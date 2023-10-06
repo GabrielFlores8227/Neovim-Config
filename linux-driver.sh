@@ -104,11 +104,7 @@ download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/m
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
 
 # neovim plugs
-
 echo -e "\n\n\033[0;37;43m[*] Downloading init.vim\033[m\n"
-
 wget -P $HOME/.config/nvim/init.vim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim) \
 && echo -e "\n\033[0;37;42m[v] neovim-pluggins is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
 || echo -e "\n\033[0;37;41m[x] neovim-pluggins could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
-
-echo -e "
