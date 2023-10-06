@@ -29,8 +29,40 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 
 ## ⚡ Quick Installation
 
-Streamline the process of configuring Neovim and its plugins on Unix systems with the help of linux-driver.sh. The script is tailored for systems supporting package managers such as apt and yum. It efficiently manages the installation of Neovim, plugins, and other required packages, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
+Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `linux-driver.sh`. The script is tailored for systems supporting package managers such as apt and yum. It efficiently manages the installation of Neovim, plugins, and other required packages, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
 
+### 📦 Dependencies to be Installed
+
+- [Latest Python Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-python/latest-python.sh)
+
+- [Latest Pip Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-pip/latest-pip.sh)
+  
+- pynvim (installed via pip)
+
+- [Latest Curl Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-curl/latest-curl.sh)
+
+- [Latest Node.js Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nodejs/latest-nodejs.sh)
+
+- [Latest Yarn Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-yarn/latest-yarn.sh)
+
+- [Latest Neovim Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-neovim/latest-neovim.sh)
+
+- [Latest Xclip Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-xclip/latest-xclip.sh)
+
+- [Latest Unzip Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-unzip/latest-unzip.sh)
+
+- [Latest Wget Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-wget/latest-wget.sh) (currently commented out)
+
+- [Latest Nerd Fonts (Anonymous Pro) Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-nerdfonts-anonymouspro/latest-nerdfonts-anonymouspro.sh)
+  
+- [Latest Git Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-git/latest-git.sh)
+  
+- [Latest Vim-Plug Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh)
+  
+- [init.vim](https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim) (installed via wget)
+
+### ⚡ Execute
+  
 ```bash
 git clone https://github.com/GabrielFlores8227/Neovim-Config \
 && chmod +x ./Neovim-Config/linux-driver.sh \
