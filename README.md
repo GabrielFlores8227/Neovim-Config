@@ -34,8 +34,7 @@ Streamline the process of configuring Neovim and its plugins on Unix systems wit
 ```bash
 git clone https://github.com/GabrielFlores8227/Neovim-Config \
 && chmod +x ./Neovim-Config/linux-driver.sh \
-&& ./Neovim-Config/linux-driver.sh \
-&& pip install pynvim
+&& ./Neovim-Config/linux-driver.sh
 ```
 
 ## 📎 Keybindings
