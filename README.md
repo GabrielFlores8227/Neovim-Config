@@ -2,9 +2,10 @@
 
 ![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.gif)
 
-This repository contains Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow. 
+This repository contains Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow.
 
 ## ⚠️ Required Packages
+
 - Node.js
 - Npm
 - Yarn
@@ -12,6 +13,7 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 - NerdFonts
 
 ## 📙 Support
+
 - Python
 - Bash
 - Node.js
@@ -22,13 +24,15 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 - Others
 
 ## 🔌 Plug-Manager
- - [vim-plug](https://github.com/junegunn/vim-plug)
 
-## ⚡ Quick Installation (Beta)
-Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Neovim, plugins, and required packages.
+- [vim-plug](https://github.com/junegunn/vim-plug)
+
+## ⚡ Quick Installation
+
+Streamline the process of configuring Neovim and its plugins on Unix systems with the help of linux-driver.sh. The script is tailored for systems supporting package managers such as apt, yum, and dnf. It efficiently manages the installation of Neovim, plugins, and other required packages, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
 
 ```bash
-git clone https://github.com/GabrielFlores8227/Neovim-Config && chmod +x ./Neovim-Config/unix-driver.sh && ./Neovim-Config/unix-driver.sh
+git clone https://github.com/GabrielFlores8227/Neovim-Config && chmod +x ./Neovim-Config/linux-driver.sh && ./Neovim-Config/linux-driver.sh
 ```
 
 ## 📎 Keybindings

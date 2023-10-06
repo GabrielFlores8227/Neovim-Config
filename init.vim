@@ -199,17 +199,16 @@ let g:NERDTreeDirArrowCollapsible="📂"
 
 " Configure coc.nvim
 let g:coc_global_extensions = [
+  \ 'coc-prettier',
   \ 'coc-snippets',
-  \ 'coc-tsserver',
+  \ 'coc-sh',
+  \ 'coc-yaml',
   \ 'coc-json',
+  \ 'coc-xml',
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-python',
-  \ 'coc-sh',
-  \ 'coc-prettier',
-  \ 'coc-docker',
-  \ 'coc-yaml',
-  \ 'coc-xml',
+  \ 'coc-tsserver',
   \ ]
 
 
