@@ -104,4 +104,4 @@ download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/m
 download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-vimplug/latest-vimplug.sh"
 
 # neovim plugs
-wget -O $HOME/.config/nvim/init.vim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim)
+wget -P $HOME/.config/nvim/init.vim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim)
