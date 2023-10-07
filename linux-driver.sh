@@ -57,7 +57,7 @@ function download_and_install() {
 # Execute
 ##
 
-echo -e "\n\033[0;37;43m[*] Some operations may require root privileges to install required packages | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
+echo -e "\n\033[0;37;43m[*] Some operations may require root privileges to install required dependencies | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
 echo -e "\n"
 
 if command -v apt >/dev/null; then
