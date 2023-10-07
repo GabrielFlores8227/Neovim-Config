@@ -321,14 +321,13 @@ let g:NERDTreeDirArrowCollapsible="📂"
 let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-snippets',
+  \ 'coc-python',
   \ 'coc-sh',
   \ 'coc-yaml',
   \ 'coc-json',
   \ 'coc-xml',
   \ 'coc-html',
   \ 'coc-css',
-  \ 'coc-python',
-  \ 'coc-tsserver',
   \ ]
 
 
