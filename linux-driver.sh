@@ -106,6 +106,6 @@ download_and_install "https://github.com/GabrielFlores8227/Linux-Packages/blob/m
 
 # neovim plugs
 echo -e "\n\n\033[0;37;43m[*] Downloading init.vim | $HOME/.config/nvim/init.vim\033[m\n"
-wget -P $HOME/.config/nvim $(convert_url https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim) \
+wget -P $HOME/.config/nvim $(convert_url "https://github.com/GabrielFlores8227/Neovim-Config/blob/main/init.vim") \
 && echo -e "\n\033[0;37;42m[v] init.vim is installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp "" \
 || echo -e "\n\033[0;37;41m[x] init.vim could not be installed | PRESS ENTER TO CONTINUE\033[0m" && read -sp ""
