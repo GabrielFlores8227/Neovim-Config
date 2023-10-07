@@ -64,8 +64,6 @@ if command -v apt >/dev/null; then
     sudo apt update -y && sudo apt-get install wget -y
 elif command -v yum >/dev/null; then
     sudo yum update -y && sudo yum install wget -y
-elif command -v dnf >/dev/null; then
-    sudo dnf update -y && sudo dnf install wget -y
 else
     exit 1
 fi
