@@ -1,16 +1,24 @@
-# ⭐ Neovim Config
+<div align="center">
+  <img src='https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.svg' height='110'>
+</div>
 
-![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.gif)
+<h1 align="center">
+  My Neovim init.vim
+</h1>
+
+<p align="center">
+  This repository contains Neovim configuration file (init.vim)
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.0.0-blue" alt="version">
+</p>
+
+## 🖥️ Demo
 
 This repository contains Neovim configuration files. Neovim is a powerful text editor built as a modernized version of Vim. With this configuration, I have customized Neovim to enhance my coding and text editing workflow.
 
-## ⚠️ Required Packages
-
-- Node.js
-- Npm
-- Yarn
-- Python3 & Python3-pip
-- NerdFonts
+![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.gif)
 
 ## 📙 Support
 
@@ -23,13 +31,21 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 - CSS
 - Others
 
+## ⚠️ Required Packages
+
+- Node.js
+- Npm
+- Yarn
+- Python3 & Python3-pip
+- NerdFonts
+
 ## 🔌 Plug-Manager
 
 - [vim-plug](https://github.com/junegunn/vim-plug)
 
 ## ⚡ Quick Installation
 
-Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `linux-driver.sh`. The script is tailored for systems supporting package managers such as apt and yum. It efficiently manages the installation of Neovim, plugins, and other required packages, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
+Streamline the process of configuring Neovim and its plugins on Unix systems with the help of `linux-driver.sh`. The script is tailored for systems supporting package managers such as apt and yum. It efficiently manages the installation of Neovim, plugins, and other required dependencies, all of which may require sudo privileges. This ensures a seamless setup experience, allowing users to dive into Neovim development without the inconvenience of manual package installations.
 
 ### 📦 Dependencies to be Installed
 
