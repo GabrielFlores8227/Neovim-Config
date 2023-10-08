@@ -22,10 +22,9 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 
 ## 📙 Support
 
-- Python
 - Bash
+- Python
 - Node.js
-- TypeScript
 - JavaScript
 - HTML
 - CSS
