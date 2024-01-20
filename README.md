@@ -20,16 +20,6 @@ This repository contains Neovim configuration files. Neovim is a powerful text e
 
 ![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Neovim-Config/image.gif)
 
-## 📙 Support
-
-- Bash
-- Python
-- Node.js
-- JavaScript
-- HTML
-- CSS
-- Others
-
 ## ⚠️ Required Packages
 
 - Node.js
