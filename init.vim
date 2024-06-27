@@ -200,6 +200,7 @@ let g:NERDTreeDirArrowCollapsible="📂"
 " Configure coc.nvim
 let g:coc_global_extensions = [
   \ 'coc-prettier',
+  \ 'coc-docker',
   \ 'coc-snippets',
   \ 'coc-python',
   \ 'coc-sh',
