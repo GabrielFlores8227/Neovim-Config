@@ -88,107 +88,42 @@ augroup END
 " Configure vim-devicons
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
-" Statusline setup
+" Lightline statusline setup
 let g:lightline = {
-  \ 'colorscheme': 'one',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \   'right': [ [ 'lineinfo' ],
-  \              [ 'percent' ],
-  \              [ 'fileencoding', 'fileformat', 'filetype' ] ]
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'fugitive#head'
-  \ },
-  \ 'component_expand': {
-  \   'filetype': 'lightline#filetype#default',
-  \   'lineinfo': 'lightline#lineinfo#percentage',
-  \   'percent': 'lightline#percent#data',
-  \   'gitbranch': 'lightline#gitbranch#branchname'
-  \ },
-  \ 'component_type': {
-  \   'gitbranch': 'readonly'
-  \ }
-\ }
-
-let g:lightline.colorscheme = 'one'
-let g:lightline.active = {
-  \ 'left': [ [ 'mode', 'paste' ],
-  \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \ 'right': [ [ 'lineinfo' ],
-  \            [ 'percent' ],
-  \            [ 'fileencoding', 'fileformat', 'filetype' ] ]
-\ }
-
-let g:lightline.component_function = {
-  \ 'gitbranch': 'fugitive#head'
-\ }
-
-let g:lightline.component_expand = {
-  \ 'filetype': 'lightline#filetype#default',
-  \ 'lineinfo': 'lightline#lineinfo#percentage',
-  \ 'percent': 'lightline#percent#data',
-  \ 'gitbranch': 'lightline#gitbranch#branchname'
-\ }
-
-let g:lightline.component_type = {
-  \ 'gitbranch': 'readonly'
-\ }
-
-let g:lightline.separator = {
-  \ 'left': '',
-  \ 'right': ''
-\ }
-
-let g:lightline.subseparator = {
-  \ 'left': '',
-  \ 'right': ''
-\ }
-
-let g:lightline.tabline = {
-  \ 'left': [ [ 'buffers' ],
-  \           [ 'tabnum' ] ],
-  \ 'right': [ [ 'close' ] ]
-\ }
-let g:lightline.component_type = {
-  \ 'gitbranch': 'readonly'
-\ }
-let g:lightline.active = {
-  \ 'left': [ [ 'mode', 'paste' ],
-  \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \ 'right': [ [ 'lineinfo' ],
-  \            [ 'percent' ],
-  \            [ 'fileencoding', 'fileformat', 'filetype' ] ]
-\ }
-let g:lightline.component_expand = {
-  \ 'filetype': 'lightline#filetype#default',
-  \ 'lineinfo': 'lightline#lineinfo#percentage',
-  \ 'percent': 'lightline#percent#data',
-  \ 'gitbranch': 'lightline#gitbranch#branchname'
-\ }
-
-let g:lightline.colorscheme = 'one'
-let g:lightline.separator = {
-  \ 'left': '',
-  \ 'right': ''
-\ }
-let g:lightline.subseparator = {
-  \ 'left': '',
-  \ 'right': ''
-\ }
-let g:lightline.tabline = {
-  \ 'left': [ [ 'buffers' ],
-  \           [ 'tabnum' ] ],
-  \ 'right': [ [ 'close' ] ]
-\ }
-
-" Colorscheme monokai
-" colorscheme monokai
-
-" Colorscheme dracula
-colorscheme dracula
-let g:lightline.colorscheme = 'dracula'
+      \ 'colorscheme': 'dracula',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileencoding', 'fileformat', 'filetype' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component_expand': {
+      \   'filetype': 'lightline#filetype#default',
+      \   'lineinfo': 'lightline#lineinfo#percentage',
+      \   'percent': 'lightline#percent#data',
+      \   'gitbranch': 'lightline#gitbranch#branchname'
+      \ },
+      \ 'component_type': {
+      \   'gitbranch': 'readonly'
+      \ },
+      \ 'separator': {
+      \   'left': '',
+      \   'right': ''
+      \ },
+      \ 'subseparator': {
+      \   'left': '',
+      \   'right': ''
+      \ },
+      \ 'tabline': {
+      \   'left': [ [ 'buffers' ],
+      \             [ 'tabnum' ] ],
+      \   'right': [ [ 'close' ] ]
+      \ }
+      \ }
 
 " NERDTree key mapping
 nmap <C-n> :NERDTreeToggle<CR>
@@ -210,7 +145,6 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css',
   \ ]
-
 
 " Key mappings for coc.nvim
 inoremap <silent><expr> <TAB>
@@ -257,4 +191,5 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-" Add your remaining configurations and mappings here
+" Colorscheme dracula
+colorscheme dracula
